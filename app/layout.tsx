@@ -1,26 +1,16 @@
-import "./globals.css";
+import type { ReactNode } from "react";
+import { Inter } from "next/font/google";
 
-export const metadata = {
-  title: "Second Brain",
-  description: "AI Knowledge System",
-};
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-
-      <body>
-
-        {children}
-
-      </body>
-
+    <html lang="en" className={inter.variable}>
+      <body>{children}</body>
     </html>
   );
 }

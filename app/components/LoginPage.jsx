@@ -349,7 +349,7 @@ export default function LoginPage() {
             overflow: "hidden"
           }}
         >
-          <div style={{ position: "absolute", inset: 0 }}>
+          <div style={{ position: "absolute", inset: 0, top: -40,}}>
             <KnowledgeGraph />
           </div>
 
@@ -357,7 +357,7 @@ export default function LoginPage() {
             style={{
               position: "absolute",
               inset: 0,
-              background: "linear-gradient(to bottom, rgba(10,10,15,0.4), rgba(10,10,15,0.85))"
+              background: "linear-gradient(to bottom, rgba(10,10,15,0), rgba(10,10,15,0))"
             }}
           />
 
@@ -366,12 +366,12 @@ export default function LoginPage() {
             <div style={{ width: 30, height: 30, background: T.accent, borderRadius: 8, display: "flex", alignItems: "center", justifyC: "center", justifyContent: "center" }}>
               <BrainIcon size={16} />
             </div>
-            <b style={{ color: T.text }}>Second Brain</b>
+            <b style={{fontSize: 25, color: T.text }}>Second Brain</b>
           </div>
 
           {/* LEFT TEXT */}
           <div style={{ position: "absolute", bottom: 40, left: 40, zIndex: 2 }}>
-            <h1 style={{ fontSize: "36px", lineHeight: 1.2, letterSpacing: "-.04em" }}>
+            <h1 style={{ fontSize: "60px", lineHeight: 1.2, letterSpacing: "-.04em" }}>
               Your personal AI-powered
               <br />
               knowledge system
@@ -385,8 +385,9 @@ export default function LoginPage() {
         {/* RIGHT PANEL */}
         <div
           className="login-right"
-          style={{
-            width: "45%",
+            style={{
+            overflowY: "auto",
+            width: "43%",
             minWidth: 400,
             background: T.surface,
             display: "flex",
@@ -395,15 +396,15 @@ export default function LoginPage() {
             padding: 40
           }}
         >
-          <form onSubmit={handleSubmit} style={{ width: "100%", maxWidth: 360 }}>
+          <form onSubmit={handleSubmit} style={{ width: "100%", maxWidth: 420, margin: "auto" }}>
             {/* HEADER */}
             <div className="anim-0" style={{ marginBottom: 30 }}>
               <div style={{ width: 42, height: 42, background: T.accent, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20 }}>
                 <BrainIcon />
               </div>
 
-              <h2 style={{ fontSize: 24, marginBottom: 5 }}>
-                {view === "login" ? "Welcome back" : view === "signup" ? "Create your brain" : "Reset password"}
+              <h2 style={{ fontSize: 40, marginBottom: 5 }}>
+                {view === "login" ? "Hey there!" : view === "signup" ? "Design your brain" : "Reset password"}
               </h2>
 
               <p style={{ color: T.textSecondary, fontSize: 13 }}>
