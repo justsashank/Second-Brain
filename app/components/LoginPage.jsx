@@ -366,12 +366,12 @@ export default function LoginPage() {
             <div style={{ width: 30, height: 30, background: T.accent, borderRadius: 8, display: "flex", alignItems: "center", justifyC: "center", justifyContent: "center" }}>
               <BrainIcon size={16} />
             </div>
-            <b style={{fontSize: 25, color: T.text }}>Second Brain</b>
+            <b style={{fontSize: 30, color: T.text }}>Second Brain</b>
           </div>
 
           {/* LEFT TEXT */}
           <div style={{ position: "absolute", bottom: 40, left: 40, zIndex: 2 }}>
-            <h1 style={{ fontSize: "60px", lineHeight: 1.2, letterSpacing: "-.04em" }}>
+            <h1 style={{ fontSize: "60px", lineHeight: 1.2, letterSpacing: "-.04em", color: "#ffff", }}>
               Your personal AI-powered
               <br />
               knowledge system
@@ -403,7 +403,7 @@ export default function LoginPage() {
                 <BrainIcon />
               </div>
 
-              <h2 style={{ fontSize: 40, marginBottom: 5 }}>
+              <h2 style={{ fontSize: 40, marginBottom: 5, color: "#ffff", }}>
                 {view === "login" ? "Hey there!" : view === "signup" ? "Design your brain" : "Reset password"}
               </h2>
 
